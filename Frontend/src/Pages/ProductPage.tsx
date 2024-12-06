@@ -16,7 +16,11 @@ const ProductPage = () => {
     getProduct();
   }, [id]);
 
-  return <ProductInfo product={product!} />;
+  return (
+    <>
+      <ProductInfo product={product!} />
+    </>
+  );
 };
 
 export default ProductPage;
