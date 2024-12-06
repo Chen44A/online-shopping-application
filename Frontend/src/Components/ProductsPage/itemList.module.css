@@ -1,0 +1,52 @@
+.card {
+    background: var(--card-background-color);
+    padding: 1rem;
+    transition: transform 0.2s;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .card-body {
+    padding: 0.7rem;
+    font-size: 1.25rem;
+  }
+  
+  .card:hover {
+    background: #052707;
+  }
+
+  .card h6 {
+    font-weight: 200;
+    font-size: 0.8rem;
+  }
+
+  .card h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* 控制显示的行数，这里是显示3行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 使用省略号表示溢出的文本 */
+  }
+  
+  .smallContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 30px 0 10px 0;
+  }
+
+  

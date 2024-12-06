@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --primary-color: #ff1744;
+  --text-color: #f4f4f4;
+  --secondary-color: #1a237e;
+  --background-color: #fbfbfb;
+  --border-color: #03a9f4;
+  --error-background-color: #d84315;
+  --error-color: #ffab91;
+  --warning-background-color: #ff6f00;
+  --warning-color: #ffe082;
+  --info-background-color: #1565c0;
+  --info-color: #96f5f7;
+  --card-background-color: #0b440e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #f4f4f4;
+  background: #e7e7e7;
+}
+
+main {
+  padding: 0;
+  min-height: 80vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  row-gap: 4rem;
+  padding: 0 10%;
+}
+
+
+/* style for ad banner */
+.ad-banner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
+}
+
+.ad-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ad-banner p {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  .ad-banner {
+    height: 400px;
+  }
+
+  .ad-banner p {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ad-banner {
+    height: 400px;
+  }
+
+  .ad-banner p {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+}
+
+/* Add to cart button */
+.AddToCartBtn {
+  background-color: #ff7f50; 
+  color: white; 
+  border: none;
+  border-radius: 10px; 
+  padding: 12px 20px; 
+  font-size: 16px;
+  font-weight: bold; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.AddToCartBtn:hover {
+  background-color: #ff6347; 
+  transform: scale(1.05); 
+}
+
+.AddToCartBtn:active {
+  transform: scale(1); 
+}
+
+
+/* style for footer */
+footer {
+  color: #000;
+  text-align: center;
+  padding: 50px 0;
+  font-weight: 400;
+  margin-top: 80px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+
+/* style for product detail page */
+.productDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 5rem 0 2rem;
+  color: #000;
+}
+
+.details img {
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0px 0px 15px 6px rgba(0, 0, 0, 0.6);
+}
+
+.details h2 {
+  text-align: left;
+}
+
+.rating {
+  color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 3rem;
+  }
+
+  .details {
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+  }
+}
+
+.smallContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 30px 0 10px 0;
+  gap: 200px;
+}
+
+.smallContainer small {
+  font-size: 1.2rem;
+}
+
+/* Style for cart page */
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.cart-detail {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: #ffffff;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  width: 600px;
+}
+
+.cart-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cart-item-info h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.cart-item-info h2 {
+  font-size: 1.2rem;
+}
+
+.quantity-control{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.3rem;
+}
+
+.quantity-control p{
+  width: 40px;
+  text-align: center;
+}
+
+.quantity-btn{
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  }
+  
+.delete-container {
+  display: flex;
+  gap: 10px;
+}
+.delete-container p{
+  width: 70px;
+}
+
+.deleteBtn {
+  background-color: transparent; 
+  border: none; 
+  font-size: 1.2rem;
+  cursor: pointer; 
+  transition: transform 0.2s ease
+}
+
+.deleteBtn:hover {
+  transform: scale(1.2); 
+}
+
+
+.sum-container {
+  width: 100%;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.sum {
+  font-weight: bold;
+}
+.betalaBtn {
+  background-color: #404040; 
+  color: #ffffff; 
+  font-size: 16px; 
+  font-weight: bold; 
+  padding: 16px 80px; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+}
+
+.betalaBtn:hover {
+  transform: translateY(-2px); 
+}
+
+@media (max-width: 768px) {
+  .cart-detail {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .cart-item {
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 20px;
+  }
+
+  .cart-item-info {
+    width: 100%;
+    gap: 20px;
+    flex-direction: column; 
+  }
+
+  .cart-img {
+    width: 60px;
+    height: 60px; 
+  }
+
+  .cart-item-info h3 {
+    font-size: 0.7rem; 
+  }
+
+  .cart-item-info h2 {
+    font-size: 1rem;
+  }
+
+  .delete-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .sum-container {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .betalaBtn {
+    padding: 12px 60px; 
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .cart-item-info h3 {
+    font-size: 0.8rem; 
+  }
+
+  .cart-item-info h2 {
+    font-size: 1rem;
+  }
+  .cart-item-info p {
+    font-size: 0.8rem;
+  }
+
+  .quantity-control p{
+    font-size: 0.8rem;
+  }
+
+  .delete-container p{
+    width: 80px;
+    font-size: 0.8rem;
+  }
+}
