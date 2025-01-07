@@ -11,7 +11,6 @@ export const ProductsPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       const result = await LoadProducts('/products');
-      // console.log(result);
       setProducts(result);
     };
 

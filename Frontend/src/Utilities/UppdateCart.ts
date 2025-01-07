@@ -1,5 +1,5 @@
 export const updateCartItem = async (id: number, quantity: number) => {
-  const response = await fetch(`http://localhost:5031/cart/${id}`, {
+  const response = await fetch(`http://localhost:5031/api/cart/${id}`, {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ quantity }),
@@ -15,7 +15,7 @@ export const addProductToCart = async (product: {
   price: number;
   image: string;
 }) => {
-  const response = await fetch(`http://localhost:5031/cart`, {
+  const response = await fetch(`http://localhost:5031/api/cart`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ ...product, quantity: 1 }),
@@ -25,7 +25,7 @@ export const addProductToCart = async (product: {
 };
 
 export const deleteCartItem = async (id: number) => {
-  const response = await fetch(`http://localhost:5031/cart/${id}`, {
+  const response = await fetch(`http://localhost:5031/api/cart/${id}`, {
     method: 'DELETE',
   });
   if (!response.ok) throw new Error('Failed to delete cart item');
